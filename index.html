@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hikmet Burak Tekin's Website</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L6R0BYBSB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9L6R0BYBSB');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,7 +39,6 @@
             position: relative;
         }
 
-        /* Dil değiştirme butonu için stil */
         .language-switch {
             position: absolute;
             top: 2rem;
@@ -229,7 +236,6 @@ li strong {
     line-height: 1.6;
 }
 
-/* Yeni eklenen skill ikonları için stiller */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -301,11 +307,9 @@ li strong {
     </style>
 </head>
 <body>
-    <!-- Dil değiştirme butonu -->
     <button class="language-switch" onclick="toggleLanguage()">EN</button>
 
     <header data-aos="fade-down" data-aos-duration="1000">
-        <!-- Türkçe içerik -->
         <div id="content-tr">
             <h1 class="text-scramble">Selam, ben Hikmet Burak Tekin <span class="emoji">👾</span></h1>
             <p class="bio">
@@ -316,7 +320,6 @@ li strong {
                 4. Sınıf @ Dokuz Eylül University<br>
             </p>
         </div>
-        <!-- İngilizce içerik için yer tutucu -->
         <div id="content-en" style="display: none">
             <h1 class="text-scramble">Hi, I'm Hikmet Burak Tekin <span class="emoji">👾</span></h1>
             <p class="bio">
@@ -392,7 +395,7 @@ li strong {
                     <span class="emoji">🎓</span>
                     <div class="experience-content">
                         <div>Yönetim Bilişim Sistemleri @ <strong>Dokuz Eylül Üniversitesi</strong><span class="date">2021 Ekim - 2026 Temmuz</span></div>
-                        <span class="job-description"><!--Eğitimim boyunca istatistik, matematik, finansal muhasebe ve ekonomi konularında sağlam bir temel edindim. Ayrıca bulut bilişim konusunda derinleştim, bir Raspberry Pi projesi tamamladım ve proje yönetimi becerileri geliştirdim. Python, HTML, CSS, JS ve Node.js konularında bilgimi artırarak öğrenme tutkum devam ediyor.-->W.I.P.</span>
+                        <span class="job-description">W.I.P.</span>
                     </div>
                 </li>
                 <li data-aos="fade-right" data-aos-delay="400">
@@ -418,7 +421,7 @@ li strong {
                     <span class="emoji">🎓</span>
                     <div class="experience-content">
                         <div>Management Information Systems @ <strong>Dokuz Eylul University</strong><span class="date">2021 October - 2026 July</span></div>
-                        <span class="job-description"><!--Through my studies, I've acquired a solid understanding of statistics, mathematics, financial accounting, and economics. I've also delved into cloud computing, completed a Raspberry Pi project, and developed project management skills. My passion for learning continues as I advance my knowledge in Python, HTML, CSS, JS, and Node.js.-->W.I.P.</span>
+                        <span class="job-description">W.I.P.</span>
                     </div>
                 </li>
                 <li data-aos="fade-right" data-aos-delay="400">
@@ -440,18 +443,6 @@ li strong {
     </section>
 
    <section class="section" data-aos="fade-up">
-         <!--<div id="interests-tr">
-            <h2>İlgi Alanlarım</h2>
-            <div class="tags">
-                <span class="tag">[alan1]</span> •
-                <span class="tag">[alan2]</span> •
-                <span class="tag">[alan3]</span> •
-                <span class="tag">[alan4]</span>
-            </div>
-        </div>
-        <div id="interests-en" style="display: none">
-             Buraya İngilizce ilgi alanları yazılacak 
-        </div>-->
     </section>
 
     <section class="section" data-aos="fade-up">
@@ -544,14 +535,12 @@ li strong {
                 el.style.display = el.style.display === 'none' ? 'block' : 'none';
             });
 
-            // Dil değiştiğinde text scramble'ı tekrar başlat
             const elements = document.querySelectorAll('.text-scramble:not([style*="display: none"])');
             elements.forEach(el => {
                 const fx = new TextScramble(el);
                 const emoji = el.querySelector('.emoji');
                 const emojiContent = emoji ? emoji.textContent : '';
                 
-                // Dile göre doğru metni seç
                 const correctText = isCurrentlyTurkish ? 
                     "Hi, I'm Hikmet Burak Tekin" : 
                     "Selam, ben Hikmet Burak Tekin";
@@ -618,7 +607,6 @@ li strong {
             }
         }
 
-        // Animasyonu başlat
         document.addEventListener('DOMContentLoaded', () => {
             const elements = document.querySelectorAll('.text-scramble');
             elements.forEach(el => {
